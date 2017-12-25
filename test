@@ -1,0 +1,22 @@
+[app]
+sdk_dir = /Users/admin/Wanbo/code/android/sdk
+git_download_name = Werb/GankWithZhihu
+assembleRelease = False
+
+[dir]
+base_file_dir = /Users/admin/Desktop
+adb_dir =  /Users/admin/Werb/code/android/sdk/platform-tools/adb
+gradle_dir = /users/admin/werb/code/gradle-2.14.1/bin
+dir_name = AutoSecret
+code_dir_name = SourceCode
+apk_dir_name = Apk
+code_zip_name = GankWithZhihu
+
+
+# "C:\Program Files (x86)\Android\android-sdk\build-tools\android-4.4W\aapt.exe package -f -m -M   C:\Users\Moji\AppData\Local\Temp\r3avdjv1.amc\AndroidManifest.xml -J C:\Users\Moji\AppData\Local\Temp\r3avdjv1.amc --custom-package formsgallery.android -F C:\Users\Moji\AppData\Local\Temp\r3avdjv1.amc\resources.apk.bk -S obj\Debug\res -S D:\FormsGallery\FormsGallery\FormsGallery.Android\obj\Debug\__library_projects__\Xamarin.Forms.Maps.Android\library_project_imports\res -S D:\FormsGallery\FormsGallery\FormsGallery.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res -S D:\FormsGallery\FormsGallery\FormsGallery.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res -S D:\FormsGallery\packages\Xamarin.GooglePlayServices.22.0.0.2\lib\MonoAndroid41\22.0.0\content\./res -S D:\FormsGallery\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\21.0.3\content\./res -S D:\FormsGallery\packages\Xamarin.Android.Support.v7.AppCompat.21.0.3.0\lib\MonoAndroid403\21.0.3\content\./res -S D:\FormsGallery\packages\Xamarin.Android.Support.v7.MediaRouter.21.0.3.0\lib\MonoAndroid403\21.0.3\content\./res -j obj\Debug\__library_projects__\1_formsviewgroup.jar -I "C:\Program Files (x86)\Android\android-sdk\platforms\android-18\android.jar" --auto-add-overlay  (TaskId:163) AAPT : error : resource directory 'D:\FormsGallery\packages\Xamarin.Android.Support.v7.AppCompat.21.0.3.0\lib\MonoAndroid403\21.0.3\content\.\res' does not exist. The command exited with code 1. (TaskId:163). Done executing task "Aapt" -- FAILED. (TaskId:163)"
+
+# 步骤一：
+# D:\developer\tools\Android\sdk_old\build-tools\19.1.0\aapt.exe package -f -m -J C:\Users\zhoubo\Desktop\ant\gen -S res -M AndroidManifest.xml -I D:\developer\tools\Android\sdk_old\platforms\android-19\android.jar
+# 步骤二
+#javac -target 1.8 -bootclasspath D:\developer\tools\Android\sdk_old\platforms\android-19\android.jar -d C:\Users\zhoubo\Desktop\ant\bin src\com\zpdyf\mobileemr\*.java -encoding gbk C:\Users\zhoubo\Desktop\ant\gen\com\zpdyf\mobileemr\R.java
+

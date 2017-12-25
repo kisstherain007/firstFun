@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zpdyf.mobileemr"
+    android:versionCode="1"
+    android:versionName="9.0.01" >
+
+	<uses-sdk android:minSdkVersion="14" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 允许应用程序拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+     
+    <application
+        android:name="com.zpdyf.mobileemr.GlobalInfoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@*android:style/Theme.Black.NoTitleBar"
+        android:screenOrientation="portrait" 
+        android:largeHeap="true">
+        <activity
+            android:name="com.zpdyf.mobileemr.LoginActivity"
+            android:theme="@style/zpdyf_mobile_emr_base_theme"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zpdyf.mobileemr.MainActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait" 
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            />
+        
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhu.YizhuPeiqianListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhu.YizhuPeiyeListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.biaoben.BiaobenListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhu.YizhuZhixingListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhu.XinYizhuTixingActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.YizhuDialogActivity"
+            android:theme="@style/zpdyf_mobile_emr_yizhu_dialog" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhu.YizhuTixingDialogActivity"
+            android:theme="@style/zpdyf_mobile_emr_yizhu_dialog" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhu.YizhuTixingTanchuangActivity"
+            android:theme="@style/zpdyf_mobile_emr_yizhu_dialog" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.tizheng.ShowAddTizhengInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.tizheng.ShowLishiTizhengInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        <activity
+            android:name="com.zpdyf.mobileemr.tizheng.ShowSancedanInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.tizheng.ShowMiaobiaoActivity"
+            android:theme="@style/zpdyf_mobile_emr_yizhu_dialog" 
+            android:screenOrientation="portrait" 
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.tizheng.ShowJisuanqiActivity"
+            android:theme="@style/zpdyf_mobile_emr_yizhu_dialog" 
+            android:screenOrientation="portrait" 
+             />
+        
+        <activity
+            android:name="com.zpdyf.mobileemr.newtizheng.ShowAddTizhengInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="adjustPan|stateUnchanged"/>
+        <activity
+            android:name="com.zpdyf.mobileemr.newtizheng.ShowLishiTizhengInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+            />
+        
+        <activity
+            android:name="com.zpdyf.mobileemr.xunshi.ShowAddXunchaActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.xunshi.ShowLishiXunchaActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <!-- android:theme="@style/zpdyf_mobile_emr_base_theme" --> 
+        <activity
+            android:name="com.zpdyf.mobileemr.ZpdyfBrowserActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.zpdyf.mobileemr.hulijilu.ShowHuliJiluListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.patientinfo.PatientInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name="com.zpdyf.mobileemr.yizhuchaxun.YizhuChaxunActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name="com.zpdyf.mobileemr.patientinfo.ShowBingchengJiluShouciActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zpdyf.mobileemr.patientinfo.ShowRuyuanJiluActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zpdyf.mobileemr.patientinfo.ShowBingchengJiluActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zpdyf.mobileemr.hulijilu.AddHuliJiluActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        
+        <activity
+            android:name="com.zpdyf.mobileemr.hulijilu.ShowOneHuliJiluActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        
+        <activity 
+            android:name="com.zpdyf.mobileemr.newhulijilu.ShowHuliJiluListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="com.zpdyf.mobileemr.newhulijilu.newmultiedit.HulijiluMultieditActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+ 
+        <activity
+            android:name="com.zpdyf.mobileemr.newhulijilu.AddHuliJiluActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zpdyf.mobileemr.newhulijilu.HulijiluMultiActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.zpdyf.mobileemr.newhulijilu.ShowOneHuliJiluActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.zpdyf.mobileemr.hulipinggu.AddHuliPingguActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.hulipinggu.ShowHuliPingguListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.hulipinggu.ShowOneHuliPingguActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.tongji.ShowHulitongjiActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.feiyong.ShowFeiyongInfoActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.huliwenshu.ShowHuliWenshuListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.huliwenshu.ShowOneTypeListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.zpdyf.mobileemr.huliwenshu.ShowHuliWenshuXiangxiActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme" 
+            android:screenOrientation="portrait" 
+             />
+        <activity android:name="com.zpdyf.mobileemr.tools.PingToolsActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait" 
+             />
+        <activity android:name="com.zpdyf.mobileemr.tools.ChangeIPActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.zpdyf.mobileemr.tizheng.FaReBingRenListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+              />
+        <activity android:name="com.zpdyf.mobileemr.tools.SettingActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait" 
+             />
+        <activity android:name="com.zpdyf.mobileemr.tools.UpdatePwdActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait" 
+             />
+        <activity android:name="com.zpdyf.mobileemr.alltizheng.AllTizhengActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            />
+         <activity android:name="com.zpdyf.mobileemr.alltizheng.ShowAllDataActivity"
+            android:theme="@style/zpdyf_mobile_emr_yizhu_dialog"
+            android:screenOrientation="portrait"
+            />
+        <activity android:theme="@style/zpdyf_mobile_emr_main_theme" android:name="com.zpdyf.mobileemr.jiancha.JianyanJianChaListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/zpdyf_mobile_emr_main_theme" android:name="com.zpdyf.mobileemr.jiancha.ShowOneJianyanReport" android:screenOrientation="portrait" />
+        <activity android:theme="@style/zpdyf_mobile_emr_main_theme" android:name="com.zpdyf.mobileemr.jiancha.ShowOneJianchaReport" android:screenOrientation="portrait" />
+        <activity android:name="com.zpdyf.mobileemr.alltizheng.ShowTizhengListActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.zpdyf.mobileemr.alltizheng.ShowTizhengDetailActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.zpdyf.mobileemr.pingliangluru.TableActivity"
+            android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        
+        <activity android:name="com.zpdyf.mobileemr.yizhu.ShouCiYongYaoTiXingActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name="com.zpdyf.mobileemr.hulicuoshi.ShowHuliCuoshiActivity" 
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            />
+        
+        <activity android:name="com.zpdyf.mobileemr.tizhipinggudan.TiZhiPingguListActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name="com.zpdyf.mobileemr.tizhipinggudan.TiZhiHuLiDanActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+          <activity android:name="com.zpdyf.mobileemr.tizhipinggudan.TizhiDanPingFen"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        
+        <activity android:name="com.zpdyf.mobileemr.koufuyizhu.KouFuYizhuZhixingListActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.zpdyf.mobileemr.jingpeihedui.YizhuJingPeiListActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+        
+        <activity android:name="com.zpdyf.mobileemr.healtheducation.HealthEducationActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+        
+        <activity android:name="com.zpdyf.mobileemr.healtheducation.HealthEducationDetailActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+        <activity   android:name="com.zpdyf.mobileemr.hulicuoshi.PingguCuoshiTongjiActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+             android:screenOrientation="portrait"/>
+        <activity android:name="com.zpdyf.mobileemr.xinxichaxun.InformationSearchActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+        
+         <activity android:name="com.zpdyf.mobileemr.jujuezhixingzhanshi.JuJueZhiXingActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+         <activity android:name="com.zpdyf.mobileemr.newhulijilu.HulijiluMultiDropEditActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+             android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+
+         <activity   android:name="com.zpdyf.mobileemr.bingfangxunshi.BingFangXunShiActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+             android:screenOrientation="portrait"/>
+
+         <activity android:name="com.zpdyf.mobileemr.hujiaoxinxi.HujiaoXinxiActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+         
+         <activity android:name="com.zpdyf.mobileemr.dingshixunshi.DingShiXunShiActivity"
+             android:theme="@style/zpdyf_mobile_emr_main_theme"
+            android:screenOrientation="portrait"/>
+
+        
+        <service android:name="com.zpdyf.mobileemr.NetworkMonitorServices" android:enabled="true" />
+        <service android:name="com.zpdyf.mobileemr.yizhu.YizhuTixingService" android:enabled="true" />
+        <service android:name="com.zpdyf.mobileemr.DataTongbuService" android:enabled="true" />
+        <service android:name="com.zpdyf.mobileemr.MqttService" android:enabled="true" />
+        <receiver android:name="com.zpdyf.mobileemr.yizhu.AlarmReceiver" />
+    </application>
+
+</manifest>
